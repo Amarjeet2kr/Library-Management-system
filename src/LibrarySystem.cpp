@@ -43,8 +43,8 @@ COORD coord = {0, 0};
 
 void gotoxy (int x, int y)
 {
-coord.X = x; coord.Y = y; // X and Y coordinates
-SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+    coord.X = x; coord.Y = y; // X and Y coordinates
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
 int t(void) //for time
@@ -72,14 +72,12 @@ void mainMenu()
     gotoxy(20,13);
     cout<<"\xDB\xDB\xDB\xDB\xB2 5. View Book list";
     gotoxy(20,15);
-    cout<<"\xDB\xDB\xDB\xDB\xB2 6. Edit Book's Record";
+    cout<<"\xDB\xDB\xDB\xDB\xB2 6. Close Application";
     gotoxy(20,17);
-    cout<<"\xDB\xDB\xDB\xDB\xB2 7. Close Application";
-    gotoxy(20,19);
     cout<<"\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-    gotoxy(20,20);
+    gotoxy(20,19);
     t();
-    gotoxy(20,21);
+    gotoxy(20,20);
     cout<<"Enter your choice: ";
     cin>>choice;
 
@@ -101,9 +99,6 @@ void mainMenu()
         //viewBooks();
         break;
     case 6:
-        //editBooks();
-        break;
-    case 7:
         system("cls");
         gotoxy(16,3);
         cout<<"\tLibrary Management System";
@@ -132,34 +127,15 @@ void mainMenu()
 
 void addBooks()
 {
-    int select;
-    system("cls");
-    gotoxy(20,5);
-    cout<<"\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2SELECT CATEGOIES\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-    gotoxy(20,7);
-    cout<<"\xDB\xDB\xDB\xDB\xB2 1. Computer";
-    gotoxy(20,9);
-    cout<<"\xDB\xDB\xDB\xDB\xB2 2. Electronics";
-    gotoxy(20,11);
-    cout<<"\xDB\xDB\xDB\xDB\xB2 3. Electrical";
-    gotoxy(20,13);
-    cout<<"\xDB\xDB\xDB\xDB\xB2 4. Civil";
-    gotoxy(20,15);
-    cout<<"\xDB\xDB\xDB\xDB\xB2 5. Mechanical";
-    gotoxy(20,17);
-    cout<<"\xDB\xDB\xDB\xDB\xB2 6. Architecture";
-    gotoxy(20,19);
-    cout<<"\xDB\xDB\xDB\xDB\xB2 7. Back to main menu";
-    gotoxy(20,21);
-    cout<<"\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-    gotoxy(20,22);
-    cout<<"Enter your choice:";
-    cin>>select;
-    if(select==7)
-        mainMenu();
     
+    cout<<"Enter book details"<<endl;
+    cout<<"Book ID: "; cin>>b.bid;
+    cout<<"Book Name: "; cin>>b.bname;
+    cout<<"Author: "; cin>>b.author;
+    cout<<"Quantity: "; cin>>b.quantity;
     
 
+    
 }
 
 
