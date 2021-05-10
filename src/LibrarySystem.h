@@ -5,15 +5,13 @@
 #include<Windows.h>
 #include<stdlib.h>
 #include<time.h>
+#include<fstream>
 
 void adminLogin();
 void gotoxy (int x, int y);
 int t(void);
 void mainMenu();
 void addBooks();
-
-FILE *fp;
-
 struct books
 {
     int bid;
